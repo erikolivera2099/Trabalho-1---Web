@@ -1,0 +1,56 @@
+body{
+    background-color: #f5f4f0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header{
+    margin-top: 30px;
+    font-size: 27px;
+    
+}
+
+#span1{    
+    color: #222;
+}
+
+#span2{
+    color: darkgray;
+}
+
+#botao1{
+    background-color: brown;
+    width: 25px;
+    height: 25px;
+    margin-left: 1150px;
+}
+
+#botao2{
+    background-color: darkblue;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+#botao3{
+    background-color : forestgreen;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+#inptNome{
+    margin-left: 31px;
+}
+
+#botaoEnviar{
+    margin-left: 200px;
+    background-color: rgb(253, 158, 0);
+    color: rgb(34, 34, 34);
+}
+
+footer{
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 650px;
+    color: mediumblue;
+}

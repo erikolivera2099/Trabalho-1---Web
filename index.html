@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabalho 1 de Web</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+    <header>
+        <span id="span1">Jacob Waites - </span> <span id="span2">Desenvolvimento de Software para Web</span>
+    </header>
+
+    <div id="conteiner1">
+       <b> ____________________________________________________________________________________________________________________________________________</b>
+        <button id="botao1"></button>
+        <button id="botao2"></button>
+        <button id="botao3"></button>
+        <br>
+        <br>
+    </div>
+
+    <section id="secao1">
+        Nome <input type="text" id="inptNome" placeholder="Digite seu nome">
+        <br>
+        Mensagem <input type="text" id="inptMsg" placeholder="Digite sua mensagem">
+        <br>
+        <button id="botaoEnviar">Enviar</button>
+    </section>
+
+
+    <script>
+        var contador
+        var btn1 = document.querySelector('#botao1')
+        var btn2 = document.querySelector('#botao2')
+        var btn3 = document.querySelector('#botao3')
+        var btn_enviar = document.querySelector('#botaoEnviar')
+        var corpo = document.querySelector('body')
+
+        
+        btn1.onclick = function(){
+            corpo.style.backgroundColor = 'red';
+            corpo.style.color = 'white'
+            btn_enviar.style.color = 'white'
+        }
+
+        btn2.onclick = function(){
+            corpo.style.backgroundColor = 'darkblue';
+            corpo.style.color = 'white'
+            btn_enviar.style.color = 'white'
+        }
+        
+        btn3.onclick = function(){
+            corpo.style.backgroundColor = 'forestgreen';
+            corpo.style.color = 'white'
+            btn_enviar.style.color = 'white'
+        }
+
+        btn_enviar.onclick = function(){
+            var pegaNome = document.querySelector('#inptNome')
+            var nome = pegaNome.value
+            var pegaMsg = document.querySelector('#inptMsg')
+            var mensagem = pegaMsg.value
+
+            var texto = document.createTextNode(nome+': '+mensagem)
+            var divConteiner = document.createElement('div')
+            divConteiner.setAttribute('id',contador)
+            var quebraLinha = document.createElement('br')
+
+            var botaoExcluirMsg = document.createElement('button')
+            botaoExcluirMsg.setAttribute('id','botaoExcluirMsg')
+            botaoExcluirMsg.setAttribute('value',1)
+            var textoBotaoExcluirMsg = document.createTextNode('Excluir')
+            botaoExcluirMsg.appendChild(textoBotaoExcluirMsg)
+            botaoExcluirMsg.style.backgroundColor = 'orange'
+            botaoExcluirMsg.style.color = 'white'
+            botaoExcluirMsg.style.marginLeft = '10px'
+
+            divConteiner.appendChild(texto)
+            divConteiner.appendChild(botaoExcluirMsg)
+
+            corpo.appendChild(divConteiner)
+            divConteiner.appendChild(quebraLinha)
+
+            var apertaBotaoExcluirMsg = document.querySelector('#botaoExcluirMsg')
+
+            apertaBotaoExcluirMsg.onclick = function(){
+                // Não consegui implementar a função para excluir a mensagem correta
+            }
+            
+        } 
+        
+    </script>
+
+    <footer id="rodape"></footer>
+
+    <script>
+
+        var textoCredito = document.createTextNode('Créditos')
+        var botaoCredito = document.createElement('button')
+        botaoCredito.setAttribute('id','botaoCredito')
+        botaoCredito.appendChild(textoCredito)
+
+        var rodapeCredito = document.querySelector('#rodape')
+        rodapeCredito.appendChild(botaoCredito)
+
+        rodapeCredito.onclick = function(){
+            open('popup.html', 'popup')
+        }
+
+    </script>
+
+</body>
+
+</html>
